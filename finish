@@ -1,0 +1,7 @@
+#!/bin/bash
+# Script to mark ctf challenge as complete.
+
+dir=$(pwd)
+cd ${dir}/..
+mv ${dir} ${dir}_COMPLETE
+

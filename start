@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# Script to set up CTF challenge.
+
+if [ "$#" -gt 2 ] || [ "$#" -eq 0 ]; then
+    echo "Usage: ${0} <challenge_name> [<python_script_name>]"
+    exit 0
+fi
+
+mkdir "${1}"
+cd "${1}"
+
+if [ "$#" -eq 2 ]; then
+    code ${2}.py
+fi

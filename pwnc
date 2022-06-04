@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Script to ssh to dojo.pwn.college.
+
+ssh -i /home/kali/Documents/pwn_college/key hacker@dojo.pwn.college

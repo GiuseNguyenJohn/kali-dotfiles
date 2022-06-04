@@ -1,0 +1,15 @@
+#!/bin/bash
+# Script to save previous command as get_flag.sh,
+# mark as executable, and execute it, redirecting
+# output to flag.txt.
+
+winning_command=$(history | tail -n 1 | cut -b 8-)
+
+cat<< EOF > ./get_flag.sh
+#!/bin/bash
+
+${winning_command}
+EOF
+
+chmod +x get_flag.sh
+./get_flag.sh > flag.txt
