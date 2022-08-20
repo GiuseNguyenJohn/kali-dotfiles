@@ -20,7 +20,7 @@ from pwn import *
 context.binary = "./${2}"
 p = process("./${2}")
 if args.GDB:
-gdb.attach(p)
+    gdb.attach(p)
 
 # exploit starts here
 
