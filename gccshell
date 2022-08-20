@@ -1,0 +1,4 @@
+#!/bin/bash
+
+gcc -nostdlib -static -o shellcode-elf solve.s
+objcopy --dump-section .text=shellcode-raw shellcode-elf

@@ -2,7 +2,7 @@
 # Script to set up CTF challenge.
 
 if [ "$#" -gt 2 ] || [ "$#" -eq 0 ]; then
-    echo "Usage: ${0} <challenge_name> [<python_script_name>]"
+    echo "Usage: ${0} <challenge_name> [<challenge_binary>]"
     exit 0
 fi
 
@@ -10,5 +10,22 @@ mkdir "${1}"
 cd "${1}"
 
 if [ "$#" -eq 2 ]; then
-    code ${2}.py
+
+cat<< EOF > solve.py
+
+#!/usr/bin/env python3
+
+from pwn import *
+
+context.binary = "./${2}"
+p = process("./${2}")
+if args.GDB:
+gdb.attach(p)
+
+# exploit starts here
+
+p.interactive()
+
+EOF
+
 fi
