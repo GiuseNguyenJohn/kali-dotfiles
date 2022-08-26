@@ -16,9 +16,10 @@ cat<< EOF > solve.py
 
 from pwn import *
 
-exe = ELF("./${2}")
-context.binary = "./${2}"
-p = process("./${2}")
+binary = "./${2}"
+exe = ELF(binary)
+context.binary = binary
+p = process(binary)
 # p = remote("", )
 if args.GDB:
     gdb.attach(p)
