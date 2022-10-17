@@ -1,17 +1,25 @@
 #!/bin/bash
+# Run as normal user (don't use sudo)
 # Script to install and configure zsh, vim, and tmux on a fresh system.
 
-check_last_command (){
-    if ["$?" -ne 0]; then
-        echo "ERROR: '${1}' Failed!"
-    fi
-}
 # install packages
-apt install -y zsh vim tmux
+sudo apt install -y zsh vim tmux guake
+
+# copy dotfiles to home directory
+cp ./.zshrc ./.vimrc ./.tmux.conf ~/
 
 # setup zsh in home directory
+echo "[+] Changing default shell to zsh"
 chsh -s $(which zsh)
-check_last_command "changing shell to zsh"
+# powerlevel10k theme
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
+echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
+
 echo "[+] finished setting up zsh"
 
-# dracula theme
+# setup vim
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+# setup tmux
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
