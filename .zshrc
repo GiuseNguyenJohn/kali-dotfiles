@@ -150,3 +150,8 @@ timedatectl set-ntp true
 
 # remap caps lock
 /usr/bin/setxkbmap -option "ctrl:nocaps"
+
+# mkcd function
+function mkcd {
+    command mkdir $1 && cd $1
+}
