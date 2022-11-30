@@ -3,7 +3,7 @@
 # Script to install and configure zsh, vim, and tmux on a fresh system.
 
 # install packages
-sudo apt install -y zsh vim tmux guake curl git
+sudo apt install -y zsh vim tmux guake curl git readelf
 
 # copy dotfiles to home directory
 cp -r ./.zshrc ./.vimrc ./.tmux.conf ./dotfiles ~/
@@ -23,3 +23,6 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 
 # setup tmux
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
+# set up GDB GEF
+bash -c "$(curl -fsSL https://gef.blah.cat/sh)"
