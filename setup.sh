@@ -6,7 +6,7 @@
 sudo apt install -y zsh vim tmux guake curl git
 
 # copy dotfiles to home directory
-cp ./.zshrc ./.vimrc ./.tmux.conf ./dotfiles ~/
+cp -r ./.zshrc ./.vimrc ./.tmux.conf ./dotfiles ~/
 
 # setup zsh in home directory
 echo "[+] Changing default shell to zsh"
