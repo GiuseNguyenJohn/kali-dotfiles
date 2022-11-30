@@ -3,7 +3,7 @@
 # Script to install and configure zsh, vim, and tmux on a fresh system.
 
 # install packages
-sudo apt install -y zsh vim tmux guake
+sudo apt install -y zsh vim tmux guake curl git
 
 # copy dotfiles to home directory
 cp ./.zshrc ./.vimrc ./.tmux.conf ./dotfiles ~/
