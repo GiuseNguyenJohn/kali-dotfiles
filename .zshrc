@@ -15,7 +15,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="powerlevel10k/powerlevel10k"
+# ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -119,9 +119,6 @@ source $ZSH/oh-my-zsh.sh
 # update and upgrade alias
 alias update="sudo apt update && sudo apt upgrade"
 
-# ghidra alias
-alias ghidra="~/tools_used/ghidra_10.1.2_PUBLIC/ghidraRun"
-
 # cherrytree alias
 alias cherry="cherrytree &>/dev/null &"
 
@@ -145,9 +142,6 @@ alias start="source ~/dotfiles/start"
 alias pwnc="source ~/dotfiles/pwnc"
 alias gccshell="source ~/dotfiles/gccshell"
 
-# timedatectl
-timedatectl set-ntp true
-
 # remap caps lock
 /usr/bin/setxkbmap -option "ctrl:nocaps"
 
@@ -155,3 +149,4 @@ timedatectl set-ntp true
 function mkcd {
     command mkdir $1 && cd $1
 }
+source ~/powerlevel10k/powerlevel10k.zsh-theme

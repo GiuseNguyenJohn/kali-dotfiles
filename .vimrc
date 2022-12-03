@@ -32,7 +32,7 @@ if empty(glob(data_dir . '/autoload/plug.vim'))
 endif
 
 " dracula theme
-set termguicolors
+" set termguicolors
 call plug#begin()
 Plug 'dracula/vim', { 'as': 'dracula' }
 call plug#end()
