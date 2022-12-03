@@ -128,8 +128,11 @@ alias openshot="openshot &>/dev/null & disown"
 # sshpass alias
 alias s="source ~/dotfiles/s" 
 
+# ghidra alias
+alias ghidra="/home/kali/ghidra_10.2.2_PUBLIC/ghidraRun"
+
 # add directories to PATH variable
-export PATH="$PATH:/home/kali/.local/bin/"
+export PATH="/home/kali/jdk-17.0.5+8/bin:$PATH:/home/kali/.local/bin/"
 
 # wechall token
 export WECHALLUSER="awesomenap4"
