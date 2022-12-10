@@ -150,6 +150,6 @@ alias gccshell="source ~/dotfiles/gccshell"
 
 # mkcd function
 function mkcd {
-    command mkdir $1 && cd $1
+    command mkdir -p $1 && cd $1
 }
 source ~/powerlevel10k/powerlevel10k.zsh-theme
