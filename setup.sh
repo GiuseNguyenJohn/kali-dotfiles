@@ -7,7 +7,7 @@ sudo apt update
 sudo apt upgrade
 
 # install packages
-sudo apt install -y zsh vim tmux guake curl git binutils xclip
+sudo apt install -y zsh vim tmux guake curl git binutils xclip flameshot
 
 # setup zsh in home directory
 echo "[+] Changing default shell to zsh"
