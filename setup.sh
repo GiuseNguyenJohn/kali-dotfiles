@@ -8,6 +8,7 @@ sudo apt upgrade
 
 # install packages
 sudo apt install -y zsh vim tmux guake curl git binutils xclip flameshot
+pip3 install pwn
 
 # setup zsh in home directory
 echo "[+] Changing default shell to zsh"
@@ -40,6 +41,11 @@ echo "[+] GDB GEF setup done!"
 # copy dotfiles to home directory
 cp -r ./.zshrc ./.vimrc ./.tmux.conf ./dotfiles ~/
 echo "[+] Copied dotfiles to home directory!"
+
+# generate ssh key 
+ssh-keygen -t ed25519 -C "jnguyensac@gmail.com"
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
 
 # change password
 passwd
