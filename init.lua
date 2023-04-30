@@ -10,7 +10,7 @@ local function map(mode, lhs, rhs, opts)
     vim.keymap.set(mode, lhs, rhs, options)
 end
 
-map("i", "jk", "<Esc>")
+map({"i", "v", "s"}, "jk", "<Esc>")
 
 require "core"
 
