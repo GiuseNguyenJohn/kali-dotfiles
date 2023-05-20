@@ -7,7 +7,7 @@ sudo apt update
 sudo apt upgrade
 
 # install packages
-sudo apt install -y zsh vim tmux guake curl git binutils xclip flameshot
+sudo apt install -y zsh vim tmux guake curl git binutils xclip flameshot gdb
 pip3 install pwn
 
 # setup zsh in home directory
